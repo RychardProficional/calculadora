@@ -1,5 +1,4 @@
 export const theme = {
-  letter: {},
-  btn: {},
-  input: {},
+  lite: {},
+  dark: {},
 }

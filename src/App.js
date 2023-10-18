@@ -1,9 +1,9 @@
-import {ThemeProvider} from 'style-components';
-import './App.css';
+import {ThemeProvider} from "styled-components";
+import {theme} from "./theme";
 
 function App() {
   return (
-    <ThemeProvider theme={{}}>
+    <ThemeProvider theme={theme.lite}>
       <div className="App">
         Hello World!!!
       </div>
