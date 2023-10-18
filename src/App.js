@@ -1,10 +1,13 @@
+import {ThemeProvider} from 'style-components';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      Hello World!!!
-    </div>
+    <ThemeProvider theme={{}}>
+      <div className="App">
+        Hello World!!!
+      </div>
+    </ThemeProvider>
   );
 }
 
