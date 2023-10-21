@@ -12,8 +12,19 @@ class Calculator extends Component {
   numberOfOpenParentheses = (str) =>
     str.split("").reduce((a, c) => a + (c === "(" ? 1 : c === ")" ? -1 : 0), 0)
 
-  calc = (str) => {
+  calcPrepare = (str) => {
     str += ")".repeat(this.numberOfOpenParentheses(str))
+    str = str
+      .replace(/(\d+(\.\d+)?)%/g, (m, n) => (parseFloat(n) / 100).toString())
+      .replace("×", "*")
+      .replace("÷", "/")
+
+    return str
+  }
+
+  calc = (str) => {
+    str = this.calcPrepare(str)
+
     try {
       return eval(str)
     } catch (error) {
@@ -22,7 +33,7 @@ class Calculator extends Component {
   }
 
   check = (tv = "", newC) => {
-    const operations = ["+", "-", "/", "*", ".", "%"]
+    const operations = ["+", "-", "÷", "×", ".", "%"]
     const lestChar = tv.slice(-1)
 
     if (newC === "=") return this.calc(str)
@@ -51,7 +62,7 @@ class Calculator extends Component {
       )
         return tv.slice(0, -1) + newC
       else if (newC === "(" && (lestChar === ")" || !isNaN(lestChar))) {
-        return tv + "*" + newC
+        return tv + "×" + newC
       } else if (newC === ")") {
         if (this.numberOfOpenParentheses(tv) <= 0) return tv
       }
@@ -60,7 +71,7 @@ class Calculator extends Component {
         if (newC === "0") return tv
         else return tv.slice(0, -1) + newC
       }
-      if (lestChar === ")") return tv + "*" + newC
+      if (lestChar === ")") return tv + "×" + newC
     }
 
     return tv + newC
@@ -130,7 +141,7 @@ class Calculator extends Component {
               <Button onClick={(e) => this.headleClick(e)}>6</Button>
             </td>
             <td>
-              <Button onClick={(e) => this.headleClick(e)}>*</Button>
+              <Button onClick={(e) => this.headleClick(e)}>×</Button>
             </td>
           </tr>
           <tr>
