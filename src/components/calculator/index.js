@@ -9,6 +9,9 @@ class Calculator extends Component {
     }
   }
 
+  numberOfOpenParentheses = (str) =>
+    str.split("").reduce((a, c) => a + (c === "(" ? 1 : c === ")" ? -1 : 0), 0)
+
   check = (tv = "", newC) => {
     const operations = ["+", "-", "/", "*", ".", "%"]
     const lestChar = tv.slice(-1)
@@ -24,7 +27,7 @@ class Calculator extends Component {
       else if (newC === ".") {
         if ((tv.match(/\.(\d+)?$/gm) || []).length || lestChar === ")")
           return tv
-        if (
+        else if (
           !tv.length ||
           lestChar === "(" ||
           operations.slice(0, -1).includes(lestChar)
@@ -36,19 +39,19 @@ class Calculator extends Component {
         (lestChar === "%" && "%" === newC)
       )
         return tv.slice(0, -1) + newC
-      else if (newC === "(" && lestChar === ")") {
+      else if (newC === "(" && (lestChar === ")" || !isNaN(lestChar))) {
         return tv + "*" + newC
       } else if (newC === ")") {
-        if (
-          tv
-            .split("")
-            .reduce((a, c) => a + (c === "(" ? 1 : c === ")" ? -1 : 0), 0) <= 0
-        )
-          return tv
+        if (this.numberOfOpenParentheses(tv) <= 0) return tv
       }
     } else {
-      return tv + newC
+      if ((tv.match(/((\d+)?\.)?\d+(\.)?$/gm) || [])[0] === "0") {
+        if (newC === "0") return tv
+        else return tv.slice(0, -1) + newC
+      }
+      if (lestChar === ")") return tv + "*" + newC
     }
+
     return tv + newC
   }
 
