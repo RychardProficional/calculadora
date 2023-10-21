@@ -12,9 +12,20 @@ class Calculator extends Component {
   numberOfOpenParentheses = (str) =>
     str.split("").reduce((a, c) => a + (c === "(" ? 1 : c === ")" ? -1 : 0), 0)
 
+  calc = (str) => {
+    str += ")".repeat(this.numberOfOpenParentheses(str))
+    try {
+      return eval(str)
+    } catch (error) {
+      return "0"
+    }
+  }
+
   check = (tv = "", newC) => {
     const operations = ["+", "-", "/", "*", ".", "%"]
     const lestChar = tv.slice(-1)
+
+    if (newC === "=") return this.calc(str)
 
     if (isNaN(newC)) {
       if ((!tv.length || lestChar === "(") && !["(", ".", "-"].includes(newC))
