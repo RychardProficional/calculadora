@@ -1,5 +1,6 @@
 import { Component } from "react"
 import Button from "../button"
+import mError from "./mathematicalError"
 
 class Calculator extends Component {
   constructor(props) {
@@ -49,12 +50,13 @@ class Calculator extends Component {
     try {
       // Verifica se tem divisão por zero
       if ((str.match(/(?!\/)(0+(\.\d+)?)/gm) || []).filter((x) => parseFloat(x) === 0).length)
-        throw new Error("Divisão por zero")
+        throw new mError("Divisão por zero")
 
       // eslint-disable-next-line
       return eval(str).toString()
     } catch (e) {
-      console.log(e.message)
+      if (e.type === "mathematicalError") console.log(e.message)
+      else alert(`Erro ao tentar executar o calculo: ${str}`)
       return "0"
     }
   }
