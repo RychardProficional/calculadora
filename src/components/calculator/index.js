@@ -8,6 +8,7 @@ class Calculator extends Component {
     this.state = {
       terminalValue: "",
       datePress: 0,
+      calculationDone: false,
     }
   }
 
@@ -58,6 +59,8 @@ class Calculator extends Component {
       if (e.type === "mathematicalError") console.log(e.message)
       else alert(`Erro ao tentar executar o calculo: ${str}`)
       return "0"
+    } finally {
+      this.setState({ calculationDone: true })
     }
   }
 
@@ -97,7 +100,14 @@ class Calculator extends Component {
   }
 
   headleClick = (e) => {
-    const newTerminalValue = this.check(this.state.terminalValue, e.target.innerText)
+    const value = e.target.innerText
+    const { terminalValue, calculationDone } = this.state
+    var newTerminalValue
+    if (calculationDone) {
+      this.setState({ calculationDone: false })
+    }
+    if (!isNaN(value) && calculationDone) newTerminalValue = this.check("", value)
+    else newTerminalValue = this.check(terminalValue, value)
 
     this.setState({
       terminalValue: newTerminalValue,
