@@ -1,8 +1,8 @@
-const Button = (props) => {
+const Button = ({ children, ...rest }) => {
   return (
     <div className="content-btn">
-      <div className="btn" onClick={props.onClick}>
-        <span>{props.children}</span>
+      <div className="btn" {...rest}>
+        <span>{children}</span>
       </div>
     </div>
   )
