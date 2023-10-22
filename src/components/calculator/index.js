@@ -9,10 +9,15 @@ class Calculator extends Component {
     }
   }
 
+  operation = ["+", "-", "÷", "×", ".", "%"]
+
   numberOfOpenParentheses = (str) =>
     str.split("").reduce((a, c) => a + (c === "(" ? 1 : c === ")" ? -1 : 0), 0)
 
   calcPrepare = (str) => {
+    if (this.operation.slice(0, -1).includes(str.slice(-1)))
+      str = str.slice(0, -1)
+
     str += ")".repeat(this.numberOfOpenParentheses(str))
     str = str
       .replace(/(\d+(\.\d+)?)%/g, (m, n) => (parseFloat(n) / 100).toString())
@@ -26,24 +31,25 @@ class Calculator extends Component {
     str = this.calcPrepare(str)
 
     try {
-      return eval(str)
+      // eslint-disable-next-line
+      return eval(str).toString()
     } catch (error) {
       return "0"
     }
   }
 
   check = (tv = "", newC) => {
-    const operations = ["+", "-", "÷", "×", ".", "%"]
+    const op = this.operation
     const lestChar = tv.slice(-1)
 
-    if (newC === "=") return this.calc(str)
+    if (newC === "=") return this.calc(tv)
 
     if (isNaN(newC)) {
       if ((!tv.length || lestChar === "(") && !["(", ".", "-"].includes(newC))
         return tv
       else if (
         (tv.length === 1 || tv.slice(-2)[0] === "(") &&
-        operations.includes(lestChar)
+        op.includes(lestChar)
       )
         return tv.slice(0, -1)
       else if (newC === ".") {
@@ -52,12 +58,11 @@ class Calculator extends Component {
         else if (
           !tv.length ||
           lestChar === "(" ||
-          operations.slice(0, -1).includes(lestChar)
+          op.slice(0, -1).includes(lestChar)
         )
           return tv + "0."
       } else if (
-        (operations.slice(0, -1).includes(lestChar) &&
-          operations.includes(newC)) ||
+        (op.slice(0, -1).includes(lestChar) && op.includes(newC)) ||
         (lestChar === "%" && "%" === newC)
       )
         return tv.slice(0, -1) + newC
@@ -127,7 +132,7 @@ class Calculator extends Component {
               <Button onClick={(e) => this.headleClick(e)}>9</Button>
             </td>
             <td>
-              <Button onClick={(e) => this.headleClick(e)}>/</Button>
+              <Button onClick={(e) => this.headleClick(e)}>÷</Button>
             </td>
           </tr>
           <tr>
