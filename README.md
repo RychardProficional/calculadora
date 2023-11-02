@@ -12,7 +12,6 @@ As paletas de cores utilizadas neste projeto foram feitas utilizando o [Adobe Co
 
 Os temas deste site são constiuidos por cores personalizadas! Todas essas cores foram escolhidas para que o usuário tenha melhor familiaridade com o site. Dentre elas, existem algumas que são comuns entre todos os temas e estas são as cores carecterizam este site.
 
-<<<<<<< HEAD
 - **Cores padrão**
 
   <TABLE>
@@ -39,9 +38,6 @@ Os temas deste site são constiuidos por cores personalizadas! Todas essas cores
     </td>
   </tr>
   </table>
-=======
-- #### Cores padrão
->>>>>>> 0c7fd3110f6f54f91674d170bbf52e61c6a8866d
 
 Como mostrado, existem muitas cores padrão utilizadas nesta calculadora, mas existem algumas que definem um tema espefico, como lite e dark mode.
 
@@ -49,7 +45,6 @@ Aqui estão as cores utilizadas em cada tema deste site:
 
 - #### Lite mode
 
-<<<<<<< HEAD
   <TABLE>
   <tr>
     <td>
@@ -96,47 +91,3 @@ Aqui estão as cores utilizadas em cada tema deste site:
     </td>
   </tr>
   </table>
-=======
-  <div style="display: flex; flex-wrap: wrap; width: 500px;">
-    <div style="display: flex; flex-direction: column; padding: 10px; margin-bottom: 10px">
-      <img width="80" src="./README/images/liteFirstColor.png"/>
-      <div style="line-height: 40px; margin-left: 14px">#F0F1FF</div>
-    </div>
-    <div style="display: flex; flex-direction: column; padding: 10px; margin-bottom: 10px">
-      <img width="80" src="./README/images/liteFirstColor.png"/>
-      <div style="line-height: 40px; margin-left: 14px">#F0F1FF</div>
-    </div>
-    <div style="display: flex; flex-direction: column; padding: 10px; margin-bottom: 10px">
-      <img width="80" src="./README/images/liteFirstColor.png"/>
-      <div style="line-height: 40px; margin-left: 14px">#F0F1FF</div>
-    </div>
-    <div style="display: flex; flex-direction: column; padding: 10px; margin-bottom: 10px">
-      <img width="80" src="./README/images/liteFirstColor.png"/>
-      <div style="line-height: 40px; margin-left: 14px">#F0F1FF</div>
-    </div>
-    <div style="display: flex; flex-direction: column; padding: 10px; margin-bottom: 10px">
-      <img width="80" src="./README/images/liteFirstColor.png"/>
-      <div style="line-height: 40px; margin-left: 14px">#F0F1FF</div>
-    </div>
-    <div style="display: flex; flex-direction: column; padding: 10px; margin-bottom: 10px">
-      <img width="80" src="./README/images/liteFirstColor.png"/>
-      <div style="line-height: 40px; margin-left: 14px">#F0F1FF</div>
-    </div>
-    <div style="display: flex; flex-direction: column; padding: 10px; margin-bottom: 10px">
-      <img width="80" src="./README/images/liteFirstColor.png"/>
-      <div style="line-height: 40px; margin-left: 14px">#F0F1FF</div>
-    </div>
-    <div style="display: flex; flex-direction: column; padding: 10px; margin-bottom: 10px">
-      <img width="80" src="./README/images/liteFirstColor.png"/>
-      <div style="line-height: 40px; margin-left: 14px">#F0F1FF</div>
-    </div>
-    <div style="display: flex; flex-direction: column; padding: 10px; margin-bottom: 10px">
-      <img width="80" src="./README/images/liteFirstColor.png"/>
-      <div style="line-height: 40px; margin-left: 14px">#F0F1FF</div>
-    </div>
-    <div style="display: flex; flex-direction: column; padding: 10px; margin-bottom: 10px">
-      <img width="80" src="./README/images/liteFirstColor.png"/>
-      <div style="line-height: 40px; margin-left: 14px">#F0F1FF</div>
-    </div>
-  </div>
->>>>>>> 0c7fd3110f6f54f91674d170bbf52e61c6a8866d
