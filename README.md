@@ -8,7 +8,7 @@ Além do React, também utilizarei [styled-components ![icone styled-components]
 
 ## Temas
 
-As paletas de cores utilizadas neste projeto foram feitas utilizando o [Adobe Colors](https://color.adobe.com/pt/create/color-wheel)!
+_As paletas de cores utilizadas neste projeto foram feitas utilizando o [Adobe Colors](https://color.adobe.com/pt/create/color-wheel)!_
 
 Os temas deste site são constiuidos por cores personalizadas! Todas essas cores foram escolhidas para que o usuário tenha melhor familiaridade com o site. Dentre elas, existem algumas que são comuns entre todos os temas e estas são as cores carecterizam este site.
 
@@ -18,23 +18,23 @@ Os temas deste site são constiuidos por cores personalizadas! Todas essas cores
   <tr>
     <td>
       <img src="./README/images/colorPalette/defaultColors/yellow1.png">
-      <center>#593D08</center>
+      <div>#593D08</div>
     </td>
     <td>
       <img src="./README/images/colorPalette/defaultColors/yellow2.png">
-      <center>#593D08</center>
+      <div>#F29F05</div>
     </td>
     <td>
       <img src="./README/images/colorPalette/defaultColors/yellow3.png">
-      <center>#593D08</center>
+      <div>#8C6D0F</div>
     </td>
     <td>
       <img src="./README/images/colorPalette/defaultColors/yellow4.png">
-      <center>#593D08</center>
+      <div>#F2B705</div>
     </td>
     <td>
       <img src="./README/images/colorPalette/defaultColors/yellow5.png">
-      <center>#593D08</center>
+      <div>#F2CB05</div>
     </td>
   </tr>
   </table>
@@ -43,51 +43,166 @@ Como mostrado, existem muitas cores padrão utilizadas nesta calculadora, mas ex
 
 Aqui estão as cores utilizadas em cada tema deste site:
 
-- #### Lite mode
+- **Lite mode**
 
   <TABLE>
   <tr>
     <td>
       <img src="./README/images/colorPalette/liteBlue/liteblue1.png">
-      <center>#593D08</center>
+      <div>#F0F1FF</div>
     </td>
     <td>
       <img src="./README/images/colorPalette/liteBlue/liteblue2.png">
-      <center>#593D08</center>
+      <div>#F2E4FF</div>
     </td>
     <td>
       <img src="./README/images/colorPalette/liteBlue/liteblue3.png">
-      <center>#593D08</center>
+      <div>#D5CFE8</div>
     </td>
     <td>
       <img src="./README/images/colorPalette/liteBlue/liteblue4.png">
-      <center>#593D08</center>
+      <div>#CFD9E8</div>
     </td>
     <td>
       <img src="./README/images/colorPalette/liteBlue/liteblue5.png">
-      <center>#593D08</center>
+      <div>#E4F6FF</div>
     </td>
   </tr>
   <tr>
     <td>
       <img src="./README/images/colorPalette/liteBlue/liteblue6.png">
-      <center>#593D08</center>
+      <div>#B3C8F2</div>
     </td>
     <td>
       <img src="./README/images/colorPalette/liteBlue/liteblue7.png">
-      <center>#593D08</center>
+      <div>#91B2F2</div>
     </td>
     <td>
       <img src="./README/images/colorPalette/liteBlue/liteblue8.png">
-      <center>#593D08</center>
+      <div>#6B98F2</div>
     </td>
     <td>
       <img src="./README/images/colorPalette/liteBlue/liteblue9.png">
-      <center>#593D08</center>
+      <div>#4B83F2</div>
     </td>
     <td>
       <img src="./README/images/colorPalette/liteBlue/liteblue10.png">
-      <center>#593D08</center>
+      <div>#3071F2</div>
     </td>
   </tr>
   </table>
+
+  - **botões**
+  <table>
+  <tr>
+    <td>
+    <img src="./README/images/colorPalette/liteBlue/btnNormalLite.png">
+    <div>
+      Letra: #010021 <br> 
+      Principal: #B3C8F2 <br>
+      Borda: #6B98F2 <br> 
+      Corpo: #91B2F2
+    </div>
+    <td>
+    <td>
+    <img src="./README/images/colorPalette/liteBlue/btnEmphasesLite.png">
+    <div>
+      Letra: #010021 <br> 
+      Principal: #F0F1FF <br>
+      Borda: #CFD9E8 <br> 
+      Corpo: #D5CFE8
+    </div>
+    <td>   
+    <td>
+    <img src="./README/images/colorPalette/liteBlue/btnEqualLite.png">
+    <div>
+      Letra: #F2CB05 <br> 
+      Principal: #4B83F2 <br>
+      Borda: #91B2F2 <br> 
+      Corpo: #3071F2
+    </div>
+    <td>        
+  </tr>
+  </table>
+
+- **Dark mode**
+
+  <TABLE>
+<tr>
+  <td>
+    <img src="./README/images/colorPalette/darkBlue/darkBlue1.png">
+    <div>#023059</div>
+  </td>
+  <td>
+    <img src="./README/images/colorPalette/darkBlue/darkBlue2.png">
+    <div>#023E73</div>
+  </td>
+  <td>
+    <img src="./README/images/colorPalette/darkBlue/darkBlue3.png">
+    <div>#034C8C</div>
+  </td>
+  <td>
+    <img src="./README/images/colorPalette/darkBlue/darkBlue4.png">
+    <div>#023E73</div>
+  </td>
+  <td>
+    <img src="./README/images/colorPalette/darkBlue/darkBlue5.png">
+    <div>#00040D</div>
+  </td>
+</tr>
+<tr>
+  <td>
+    <img src="./README/images/colorPalette/darkBlue/darkBlue6.png">
+    <div>#08090D</div>
+  </td>
+  <td>
+    <img src="./README/images/colorPalette/darkBlue/darkBlue7.png">
+    <div>#1A1E26</div>
+  </td>
+  <td>
+    <img src="./README/images/colorPalette/darkBlue/darkBlue8.png">
+    <div>#343A40</div>
+  </td>
+  <td>
+    <img src="./README/images/colorPalette/darkBlue/darkBlue9.png">
+    <div>#6E7371</div>
+  </td>
+  <td>
+    <img src="./README/images/colorPalette/darkBlue/darkBlue10.png">
+    <div>#A1A69C</div>
+  </td>
+</tr>
+</table>
+
+- **botões**
+<table>
+<tr>
+  <td>
+  <img src="./README/images/colorPalette/darkBlue/btnNormalDark.png">
+  <div>
+    Letra: #F2B705 <br> 
+    Principal: #034C8C <br>
+    Borda: #023E73 <br> 
+    Corpo: #023059
+  </div>
+  </td>
+  <td>
+  <img src="./README/images/colorPalette/darkBlue/btnEmphasesDark.png">
+  <div>
+    Letra: #F29F05 <br> 
+    Principal: #6E7371 <br>
+    Borda: #A1A69C <br> 
+    Corpo: #343A40
+  </div>
+  </td>   
+  <td>
+  <img src="./README/images/colorPalette/darkBlue/btnEqualDark.png">
+  <div>
+    Letra: #ECECF9 <br> 
+    Principal: #1A1E26 <br>
+    Borda: #343A40 <br> 
+    Corpo: #08090D
+  </div>
+  </td>        
+</tr>
+</table>
