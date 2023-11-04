@@ -1,10 +1,10 @@
 # Calculadora
 
-Neste repositorio temos uma calculadora relativamente simples feita inteiramente com [React ![icone React](./README/icons/react.svg)](https://legacy.reactjs.org/).
+Neste repositorio temos uma calculadora relativamente simples feita inteiramente com [React ![icone React](./static-assets/readme/icons/react.svg)](https://legacy.reactjs.org/).
 
 O objetivo principal deste pequeno projeto é me desenvolver em construção de aplicações React, por isto, aqui tentarei utilizar ao máximo tudo que este Fremework tem a oferecer.
 
-Além do React, também utilizarei [styled-components ![icone styled-components](./README/icons/styled-components.svg)](https://styled-components.com). Ela é uma biblioteca que possibilita escrever CSS dentro do javascript, acredito que sua utilização deixara a estilização muito mais dinâmica do que CSS puro, além de poder, adquirir mais conhecimento sobre tal ferramenta e experiência de desenvolvimento web.
+Além do React, também utilizarei [styled-components ![icone styled-components](./static-assets/readme/icons/styled-components.svg)](https://styled-components.com). Ela é uma biblioteca que possibilita escrever CSS dentro do javascript, acredito que sua utilização deixara a estilização muito mais dinâmica do que CSS puro, além de poder, adquirir mais conhecimento sobre tal ferramenta e experiência de desenvolvimento web.
 
 ## Temas
 
@@ -17,23 +17,23 @@ Os temas deste site são constiuidos por cores personalizadas! Todas essas cores
   <TABLE>
   <tr>
     <td>
-      <img src="./README/images/colorPalette/defaultColors/yellow1.png">
+      <img src="./static-assets/readme/images/color-palette/default-colors/yellow1.png">
       <div>#593D08</div>
     </td>
     <td>
-      <img src="./README/images/colorPalette/defaultColors/yellow2.png">
+      <img src="./static-assets/readme/images/color-palette/default-colors/yellow2.png">
       <div>#F29F05</div>
     </td>
     <td>
-      <img src="./README/images/colorPalette/defaultColors/yellow3.png">
+      <img src="./static-assets/readme/images/color-palette/default-colors/yellow3.png">
       <div>#8C6D0F</div>
     </td>
     <td>
-      <img src="./README/images/colorPalette/defaultColors/yellow4.png">
+      <img src="./static-assets/readme/images/color-palette/default-colors/yellow4.png">
       <div>#F2B705</div>
     </td>
     <td>
-      <img src="./README/images/colorPalette/defaultColors/yellow5.png">
+      <img src="./static-assets/readme/images/color-palette/default-colors/yellow5.png">
       <div>#F2CB05</div>
     </td>
   </tr>
@@ -48,45 +48,45 @@ Aqui estão as cores utilizadas em cada tema deste site:
   <TABLE>
   <tr>
     <td>
-      <img src="./README/images/colorPalette/liteBlue/liteblue1.png">
+      <img src="./static-assets/readme/images/color-palette/lite-blue/liteblue1.png">
       <div>#F0F1FF</div>
     </td>
     <td>
-      <img src="./README/images/colorPalette/liteBlue/liteblue2.png">
+      <img src="./static-assets/readme/images/color-palette/lite-blue/liteblue2.png">
       <div>#F2E4FF</div>
     </td>
     <td>
-      <img src="./README/images/colorPalette/liteBlue/liteblue3.png">
+      <img src="./static-assets/readme/images/color-palette/lite-blue/liteblue3.png">
       <div>#D5CFE8</div>
     </td>
     <td>
-      <img src="./README/images/colorPalette/liteBlue/liteblue4.png">
+      <img src="./static-assets/readme/images/color-palette/lite-blue/liteblue4.png">
       <div>#CFD9E8</div>
     </td>
     <td>
-      <img src="./README/images/colorPalette/liteBlue/liteblue5.png">
+      <img src="./static-assets/readme/images/color-palette/lite-blue/liteblue5.png">
       <div>#E4F6FF</div>
     </td>
   </tr>
   <tr>
     <td>
-      <img src="./README/images/colorPalette/liteBlue/liteblue6.png">
+      <img src="./static-assets/readme/images/color-palette/lite-blue/liteblue6.png">
       <div>#B3C8F2</div>
     </td>
     <td>
-      <img src="./README/images/colorPalette/liteBlue/liteblue7.png">
+      <img src="./static-assets/readme/images/color-palette/lite-blue/liteblue7.png">
       <div>#91B2F2</div>
     </td>
     <td>
-      <img src="./README/images/colorPalette/liteBlue/liteblue8.png">
+      <img src="./static-assets/readme/images/color-palette/lite-blue/liteblue8.png">
       <div>#6B98F2</div>
     </td>
     <td>
-      <img src="./README/images/colorPalette/liteBlue/liteblue9.png">
+      <img src="./static-assets/readme/images/color-palette/lite-blue/liteblue9.png">
       <div>#4B83F2</div>
     </td>
     <td>
-      <img src="./README/images/colorPalette/liteBlue/liteblue10.png">
+      <img src="./static-assets/readme/images/color-palette/lite-blue/liteblue10.png">
       <div>#3071F2</div>
     </td>
   </tr>
@@ -96,7 +96,7 @@ Aqui estão as cores utilizadas em cada tema deste site:
   <table>
   <tr>
     <td>
-    <img src="./README/images/colorPalette/liteBlue/btnNormalLite.png">
+    <img src="./static-assets/readme/images/color-palette/lite-blue/btnNormalLite.png">
     <div>
       Letra: #010021 <br> 
       Principal: #B3C8F2 <br>
@@ -105,7 +105,7 @@ Aqui estão as cores utilizadas em cada tema deste site:
     </div>
     <td>
     <td>
-    <img src="./README/images/colorPalette/liteBlue/btnEmphasesLite.png">
+    <img src="./static-assets/readme/images/color-palette/lite-blue/btnEmphasesLite.png">
     <div>
       Letra: #010021 <br> 
       Principal: #F0F1FF <br>
@@ -114,7 +114,7 @@ Aqui estão as cores utilizadas em cada tema deste site:
     </div>
     <td>   
     <td>
-    <img src="./README/images/colorPalette/liteBlue/btnEqualLite.png">
+    <img src="./static-assets/readme/images/color-palette/lite-blue/btnEqualLite.png">
     <div>
       Letra: #F2CB05 <br> 
       Principal: #4B83F2 <br>
@@ -130,45 +130,45 @@ Aqui estão as cores utilizadas em cada tema deste site:
   <TABLE>
 <tr>
   <td>
-    <img src="./README/images/colorPalette/darkBlue/darkblue1.png">
+    <img src="./static-assets/readme/images/color-palette/dark-blue/darkblue1.png">
     <div>#023059</div>
   </td>
   <td>
-    <img src="./README/images/colorPalette/darkBlue/darkblue2.png">
+    <img src="./static-assets/readme/images/color-palette/dark-blue/darkblue2.png">
     <div>#023E73</div>
   </td>
   <td>
-    <img src="./README/images/colorPalette/darkBlue/darkblue3.png">
+    <img src="./static-assets/readme/images/color-palette/dark-blue/darkblue3.png">
     <div>#034C8C</div>
   </td>
   <td>
-    <img src="./README/images/colorPalette/darkBlue/darkblue4.png">
+    <img src="./static-assets/readme/images/color-palette/dark-blue/darkblue4.png">
     <div>#023E73</div>
   </td>
   <td>
-    <img src="./README/images/colorPalette/darkBlue/darkblue5.png">
+    <img src="./static-assets/readme/images/color-palette/dark-blue/darkblue5.png">
     <div>#00040D</div>
   </td>
 </tr>
 <tr>
   <td>
-    <img src="./README/images/colorPalette/darkBlue/darkblue6.png">
+    <img src="./static-assets/readme/images/color-palette/dark-blue/darkblue6.png">
     <div>#08090D</div>
   </td>
   <td>
-    <img src="./README/images/colorPalette/darkBlue/darkblue7.png">
+    <img src="./static-assets/readme/images/color-palette/dark-blue/darkblue7.png">
     <div>#1A1E26</div>
   </td>
   <td>
-    <img src="./README/images/colorPalette/darkBlue/darkblue8.png">
+    <img src="./static-assets/readme/images/color-palette/dark-blue/darkblue8.png">
     <div>#343A40</div>
   </td>
   <td>
-    <img src="./README/images/colorPalette/darkBlue/darkblue9.png">
+    <img src="./static-assets/readme/images/color-palette/dark-blue/darkblue9.png">
     <div>#6E7371</div>
   </td>
   <td>
-    <img src="./README/images/colorPalette/darkBlue/darkblue10.png">
+    <img src="./static-assets/readme/images/color-palette/dark-blue/darkblue10.png">
     <div>#A1A69C</div>
   </td>
 </tr>
@@ -178,7 +178,7 @@ Aqui estão as cores utilizadas em cada tema deste site:
 <table>
 <tr>
   <td>
-  <img src="./README/images/colorPalette/darkBlue/btnNormalDark.png">
+  <img src="./static-assets/readme/images/color-palette/dark-blue/btnNormalDark.png">
   <div>
     Letra: #F2B705 <br> 
     Principal: #034C8C <br>
@@ -187,7 +187,7 @@ Aqui estão as cores utilizadas em cada tema deste site:
   </div>
   </td>
   <td>
-  <img src="./README/images/colorPalette/darkBlue/btnEmphasesDark.png">
+  <img src="./static-assets/readme/images/color-palette/dark-blue/btnEmphasesDark.png">
   <div>
     Letra: #F29F05 <br> 
     Principal: #6E7371 <br>
@@ -196,7 +196,7 @@ Aqui estão as cores utilizadas em cada tema deste site:
   </div>
   </td>   
   <td>
-  <img src="./README/images/colorPalette/darkBlue/btnEqualDark.png">
+  <img src="./static-assets/readme/images/color-palette/dark-blue/btnEqualDark.png">
   <div>
     Letra: #ECECF9 <br> 
     Principal: #1A1E26 <br>
