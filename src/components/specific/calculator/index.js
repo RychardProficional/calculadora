@@ -1,5 +1,5 @@
 import { Component } from "react"
-import Button from "../button"
+import Button from "./button"
 import mError from "./mathematicalError"
 
 class Calculator extends Component {
@@ -13,6 +13,9 @@ class Calculator extends Component {
   }
 
   operation = ["+", "-", "÷", "×", ".", "%"]
+
+  numberOfOpenParentheses = (str) =>
+    str.split("").reduce((a, c) => a + (c === "(" ? 1 : c === ")" ? -1 : 0), 0)
 
   ACpress = () => {
     this.setState({
@@ -28,9 +31,6 @@ class Calculator extends Component {
       this.setState({ terminalValue: this.state.terminalValue.slice(0, -1) })
     }
   }
-
-  numberOfOpenParentheses = (str) =>
-    str.split("").reduce((a, c) => a + (c === "(" ? 1 : c === ")" ? -1 : 0), 0)
 
   calcPrepare = (str) => {
     if (this.operation.slice(0, -1).includes(str.slice(-1))) str = str.slice(0, -1)
