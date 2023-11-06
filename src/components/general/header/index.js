@@ -1,4 +1,4 @@
-import { Container, Div, Name, Nav, LinkNav } from "./style"
+import { Container, Div, Name, Nav, LinkNav, IconStyle } from "./style"
 import logo from "../../../logo.ico"
 
 const Header = () => {
@@ -13,6 +13,7 @@ const Header = () => {
         <LinkNav href=".">Projetos</LinkNav>
         <LinkNav href=".">Contato</LinkNav>
         <LinkNav href=".">Sobre</LinkNav>
+        <IconStyle />
       </Nav>
     </Container>
   )

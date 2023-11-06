@@ -1,33 +1,31 @@
 import { ThemeProvider, styled } from "styled-components"
-import { ImContrast } from "react-icons/im"
-import theme from "./theme.js"
 import Calculator from "./components/specific/calculator/"
 import Header from "./components/general/header"
 import Footer from "./components/general/footer"
 import GlobalStyle from "./global-style.js"
+import theme from "./theme.js"
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  min-height: 100vh;
+`
 
 function App() {
-  const Container = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    min-height: 100vh;
-  `
   return (
-    <Container>
-      <ThemeProvider theme={theme.lite}>
+    <ThemeProvider theme={theme.lite}>
+      <Container>
         <GlobalStyle />
         <>
           <Header />
-          <ImContrast />
-          <div>
-            <Calculator />
-          </div>
+          <Calculator />
+          {/* Aqui tera o mecanismo de mudança de página */}
           <Footer />
         </>
-      </ThemeProvider>
-    </Container>
+      </Container>
+    </ThemeProvider>
   )
 }
 

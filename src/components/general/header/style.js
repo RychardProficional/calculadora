@@ -1,4 +1,7 @@
 import styled from "styled-components"
+import { ImContrast } from "react-icons/im"
+
+const velTransition = ".3s"
 
 export const Container = styled.header`
   display: flex;
@@ -23,9 +26,10 @@ export const Name = styled.div`
   font-size: 20px;
 `
 
-export const Nav = styled.nav``
-
-const velTransition = ".3s"
+export const Nav = styled.nav`
+  display: flex;
+  align-items: center;
+`
 
 export const LinkNav = styled.a`
   position: relative;
@@ -36,7 +40,9 @@ export const LinkNav = styled.a`
   font-size: 1.2rem;
 
   transition: ${velTransition} ease-in-out;
-
+  &:nth-child(4) {
+    margin-right: 50px;
+  }
   &::before {
     content: "";
     position: absolute;
@@ -60,5 +66,19 @@ export const LinkNav = styled.a`
     &::before {
       width: 100%;
     }
+  }
+`
+const Icon = ({ className }) => <ImContrast className={className} />
+export const IconStyle = styled(Icon)`
+  min-height: 35px;
+  min-width: 35px;
+  padding: 0px;
+  border-radius: 20px;
+  transition: ${velTransition} ease;
+  &:hover {
+    border-radius: 3px;
+    padding: 2px;
+    background-color: blue;
+    color: red;
   }
 `
