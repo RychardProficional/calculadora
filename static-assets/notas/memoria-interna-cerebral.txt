@@ -1,1 +1,2 @@
-O header pode ter tamanhos diferentes dependendo de onde esta a scrol bar
+- O header pode ter tamanhos diferentes dependendo de onde esta a scrol bar
+- Existem varias formas de se trabalhar com themas, não é bom limitar a apenas uma. ?

@@ -1,25 +1,49 @@
-export const fonts = {
-  primaryText: "'Roboto Mono', monospace",
-  secondaryText: "Arial, Helvetica, sans-serif",
+const baseTheme = {
+  fonts: {
+    primaryText: "'Roboto Mono', monospace",
+    secondaryText: "Arial, Helvetica, sans-serif",
 
-  primaryNumber: "'Noto Sans', sans-serif",
-  secondaryNumber: "'Roboto Mono', monospace",
+    primaryNumber: "'Noto Sans', sans-serif",
+    secondaryNumber: "'Roboto Mono', monospace",
 
-  primaryTitle: "'Times New Roman', Times, serif",
-  secondaryTitle: "'Open Sans', sans-serif",
+    primaryTitle: "'Times New Roman', Times, serif",
+    secondaryTitle: "'Open Sans', sans-serif",
+  },
+  colors: {
+    yellow1: "#F2CB05",
+    yellow2: "#F2B705",
+    yellow3: "#8C6D0F",
+    yellow4: "#F29F05",
+    yellow5: "#593D08",
+
+    blackTransparent: "",
+    black1: "",
+    black2: "",
+
+    whiteTransparent: "",
+    white1: "",
+    white2: "",
+  },
 }
 
 export const theme = {
   lite: {
+    ...baseTheme,
     name: "lite",
     colors: {
-      primary: "#E4F6FF",
-      primaryLetter: "#010021",
-      primaryBackground: "#F0F1FF",
+      ...baseTheme.colors,
 
-      secondary: "#3071F2",
-      secondaryLetter: "#ECECF9",
-      secondaryBackground: "#D5CFE8",
+      primary1: "#F0F1FF",
+      primary2: "#F2E4FF",
+      primary3: "#D5CFE8",
+      primary4: "#CFD9E8",
+      primary5: "#E4F6FF",
+
+      secondary1: "#3071F2",
+      secondary3: "#4B83F2",
+      secondary2: "#6B98F2",
+      secondary4: "#91B2F2",
+      secondary5: "#B3C8F2",
 
       btn: {
         Equal: {
@@ -42,12 +66,13 @@ export const theme = {
         },
       },
     },
-    fonts: fonts,
   },
 
   dark: {
+    ...baseTheme,
     name: "dark",
     colors: {
+      ...baseTheme.colors,
       primary: "#023059",
       primaryLetter: "#ececf9",
       primaryBackground: "?",
@@ -75,7 +100,6 @@ export const theme = {
           Border: "#023E73",
           Letter: "#023059",
         },
-        fonts: fonts,
       },
     },
   },

@@ -10,7 +10,7 @@ export const Container = styled.header`
 
   font-family: ${(props) => props.theme.fonts.secondaryTitle};
   font-weight: 600;
-  background-color: ${(props) => props.theme.colors.secondaryBackground};
+  background-color: ${(props) => props.theme.colors.secondary5};
 `
 
 export const Div = styled.div`
@@ -25,7 +25,7 @@ export const Name = styled.div`
 
 export const Nav = styled.nav``
 
-const velTransition = ".2s"
+const velTransition = ".3s"
 
 export const LinkNav = styled.a`
   position: relative;
@@ -35,7 +35,7 @@ export const LinkNav = styled.a`
 
   font-size: 1.2rem;
 
-  transition: ${velTransition};
+  transition: ${velTransition} ease-in-out;
 
   &::before {
     content: "";
@@ -47,15 +47,16 @@ export const LinkNav = styled.a`
     top: 90%;
 
     transition: ${velTransition};
+    border-radius: 2px;
 
     height: 2px;
     width: 0px;
 
-    background-color: blue;
+    background-color: ${(props) => props.theme.colors.yellow1};
   }
 
   &:hover {
-    color: ${(props) => props.theme.colors.secondaryLetter};
+    color: #000000c1;
     &::before {
       width: 100%;
     }
