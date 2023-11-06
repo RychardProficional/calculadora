@@ -41,7 +41,7 @@ export const LinkNav = styled.a`
 
   transition: ${velTransition} ease-in-out;
   &:nth-child(4) {
-    margin-right: 50px;
+    margin-right: 30px;
   }
   &::before {
     content: "";
@@ -70,8 +70,8 @@ export const LinkNav = styled.a`
 `
 const Icon = ({ className }) => <ImContrast className={className} />
 export const IconStyle = styled(Icon)`
-  min-height: 35px;
-  min-width: 35px;
+  min-height: 30px;
+  min-width: 30px;
   padding: 0px;
   border-radius: 20px;
   transition: ${velTransition} ease;
