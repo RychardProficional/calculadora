@@ -24,6 +24,14 @@ const baseTheme = {
     white1: "",
     white2: "",
   },
+  longShadow: (color, size, blur) => {
+    let shadows = ""
+    for (let i = 1; i <= size; i++) {
+      shadows += `${i}px ${i}px ${blur}px ${color},`
+    }
+    console.log(shadows)
+    return shadows.slice(0, -1)
+  },
 }
 
 export const theme = {
@@ -46,23 +54,23 @@ export const theme = {
       secondary5: "#B3C8F2",
 
       btn: {
-        Equal: {
+        emphasis: {
           primary: "#B3C8F2",
-          secundary: "#91B2F2",
-          Border: "#6B98F2",
-          Letter: "#010021",
+          secondary: "#91B2F2",
+          border: "#6B98F2",
+          color: "#010021",
         },
-        Emphasis: {
+        default: {
           primary: "#F0F1FF",
-          secundary: "#D5CFE8",
-          Border: "#CFD9E8",
-          Letter: "#010021",
+          secondary: "#CFD9E8",
+          border: "#D5CFE8",
+          color: "#010021",
         },
-        Normal: {
+        equal: {
           primary: "#4B83F2",
-          secundary: "#3071F2",
-          Border: "#91B2F2",
-          Letter: "#F2CB05",
+          secondary: "#3071F2",
+          border: "#91B2F2",
+          color: "#F2CB05",
         },
       },
     },
@@ -74,31 +82,31 @@ export const theme = {
     colors: {
       ...baseTheme.colors,
       primary: "#023059",
-      primaryLetter: "#ececf9",
+      primarycolor: "#ececf9",
       primaryBackground: "?",
 
       secondary: "#08090D",
-      secondaryLetter: "#010021",
+      secondarycolor: "#010021",
       secondaryBackground: "?",
 
       btn: {
-        Equal: {
+        equal: {
           primary: "#1A1E26",
-          secundary: "#08090D",
-          Border: "#343A40",
-          Letter: "#ECECF9",
+          secondary: "#08090D",
+          border: "#343A40",
+          color: "#ECECF9",
         },
-        Emphasis: {
+        emphasis: {
           primary: "#6E7371",
-          secundary: "#343A40",
-          Border: "#A1A69C",
-          Letter: "#F29F05",
+          secondary: "#343A40",
+          border: "#A1A69C",
+          color: "#F29F05",
         },
-        Normal: {
+        default: {
           primary: "#034C8C",
-          secundary: "#3071F2",
-          Border: "#023E73",
-          Letter: "#023059",
+          secondary: "#3071F2",
+          border: "#023E73",
+          color: "#023059",
         },
       },
     },

@@ -2,8 +2,8 @@ import { ThemeProvider, styled } from "styled-components"
 import Calculator from "./components/specific/calculator/"
 import Header from "./components/general/header"
 import Footer from "./components/general/footer"
-import GlobalStyle from "./global-style.js"
-import theme from "./theme.js"
+import GlobalStyle from "./global/style"
+import theme from "./global/theme"
 
 const Container = styled.div`
   display: flex;

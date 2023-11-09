@@ -1,3 +1,4 @@
+import { Container, Table } from "./style"
 import { Component } from "react"
 import Button from "./button"
 import mError from "./mathematicalError"
@@ -56,7 +57,7 @@ class Calculator extends Component {
       // eslint-disable-next-line
       return eval(str).toString()
     } catch (e) {
-      if (e.type === "mathematicalError") console.log(e.message)
+      if (e.typeStyle === "mathematicalError") console.log(e.message)
       else alert(`Erro ao tentar executar o calculo: ${str}`)
       return "0"
     } finally {
@@ -116,13 +117,13 @@ class Calculator extends Component {
   render() {
     const { terminalValue } = this.state
     return (
-      <div className="contains-calculator">
-        <table className="calculator">
+      <Container>
+        <Table>
           <thead>
             <tr>
               <td colSpan="4">
                 <div className="contant-terminal">
-                  <input className="terminal" type="text" value={terminalValue} readOnly />
+                  <input className="terminal" typeStyle="text" value={terminalValue} readOnly />
                 </div>
               </td>
             </tr>
@@ -130,16 +131,26 @@ class Calculator extends Component {
           <tbody>
             <tr>
               <td>
-                <Button onClick={(e) => this.headleClick(e)}>(</Button>
+                <Button onClick={(e) => this.headleClick(e)} typeStyle="emphasis">
+                  (
+                </Button>
               </td>
               <td>
-                <Button onClick={(e) => this.headleClick(e)}>)</Button>
+                <Button onClick={(e) => this.headleClick(e)} typeStyle="emphasis">
+                  )
+                </Button>
               </td>
               <td>
-                <Button onClick={(e) => this.headleClick(e)}>%</Button>
+                <Button onClick={(e) => this.headleClick(e)} typeStyle="emphasis">
+                  %
+                </Button>
               </td>
               <td>
-                <Button onMouseDown={this.ACpress} onMouseUp={this.ACdownPress}>
+                <Button
+                  onMouseDown={this.ACpress}
+                  onMouseUp={this.ACdownPress}
+                  typeStyle="emphasis"
+                >
                   AC
                 </Button>
               </td>
@@ -155,7 +166,9 @@ class Calculator extends Component {
                 <Button onClick={(e) => this.headleClick(e)}>9</Button>
               </td>
               <td>
-                <Button onClick={(e) => this.headleClick(e)}>÷</Button>
+                <Button onClick={(e) => this.headleClick(e)} typeStyle="emphasis">
+                  ÷
+                </Button>
               </td>
             </tr>
             <tr>
@@ -169,7 +182,9 @@ class Calculator extends Component {
                 <Button onClick={(e) => this.headleClick(e)}>6</Button>
               </td>
               <td>
-                <Button onClick={(e) => this.headleClick(e)}>×</Button>
+                <Button onClick={(e) => this.headleClick(e)} typeStyle="emphasis">
+                  ×
+                </Button>
               </td>
             </tr>
             <tr>
@@ -183,7 +198,9 @@ class Calculator extends Component {
                 <Button onClick={(e) => this.headleClick(e)}>3</Button>
               </td>
               <td>
-                <Button onClick={(e) => this.headleClick(e)}>-</Button>
+                <Button onClick={(e) => this.headleClick(e)} typeStyle="emphasis">
+                  -
+                </Button>
               </td>
             </tr>
             <tr>
@@ -194,15 +211,19 @@ class Calculator extends Component {
                 <Button onClick={(e) => this.headleClick(e)}>.</Button>
               </td>
               <td>
-                <Button onClick={(e) => this.headleClick(e)}>=</Button>
+                <Button onClick={(e) => this.headleClick(e)} typeStyle="equal">
+                  =
+                </Button>
               </td>
               <td>
-                <Button onClick={(e) => this.headleClick(e)}>+</Button>
+                <Button onClick={(e) => this.headleClick(e)} typeStyle="emphasis">
+                  +
+                </Button>
               </td>
             </tr>
           </tbody>
-        </table>
-      </div>
+        </Table>
+      </Container>
     )
   }
 }
