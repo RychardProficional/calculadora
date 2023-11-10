@@ -29,7 +29,6 @@ const baseTheme = {
     for (let i = 1; i <= size; i++) {
       shadows += `${i}px ${i}px ${blur}px ${color},`
     }
-    console.log(shadows)
     return shadows.slice(0, -1)
   },
 }

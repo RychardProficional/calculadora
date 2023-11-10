@@ -57,7 +57,7 @@ class Calculator extends Component {
       // eslint-disable-next-line
       return eval(str).toString()
     } catch (e) {
-      if (e.typeStyle === "mathematicalError") console.log(e.message)
+      if (e.typestyle === "mathematicalError") console.log(e.message)
       else alert(`Erro ao tentar executar o calculo: ${str}`)
       return "0"
     } finally {
@@ -123,7 +123,7 @@ class Calculator extends Component {
             <tr>
               <td colSpan="4">
                 <div className="contant-terminal">
-                  <input className="terminal" typeStyle="text" value={terminalValue} readOnly />
+                  <input className="terminal" typestyle="text" value={terminalValue} readOnly />
                 </div>
               </td>
             </tr>
@@ -131,17 +131,17 @@ class Calculator extends Component {
           <tbody>
             <tr>
               <td>
-                <Button onClick={(e) => this.headleClick(e)} typeStyle="emphasis">
+                <Button onClick={(e) => this.headleClick(e)} typestyle="emphasis">
                   (
                 </Button>
               </td>
               <td>
-                <Button onClick={(e) => this.headleClick(e)} typeStyle="emphasis">
+                <Button onClick={(e) => this.headleClick(e)} typestyle="emphasis">
                   )
                 </Button>
               </td>
               <td>
-                <Button onClick={(e) => this.headleClick(e)} typeStyle="emphasis">
+                <Button onClick={(e) => this.headleClick(e)} typestyle="emphasis">
                   %
                 </Button>
               </td>
@@ -149,7 +149,8 @@ class Calculator extends Component {
                 <Button
                   onMouseDown={this.ACpress}
                   onMouseUp={this.ACdownPress}
-                  typeStyle="emphasis"
+                  typestyle="emphasis"
+                  longPressEffect={true}
                 >
                   AC
                 </Button>
@@ -166,7 +167,7 @@ class Calculator extends Component {
                 <Button onClick={(e) => this.headleClick(e)}>9</Button>
               </td>
               <td>
-                <Button onClick={(e) => this.headleClick(e)} typeStyle="emphasis">
+                <Button onClick={(e) => this.headleClick(e)} typestyle="emphasis">
                   ÷
                 </Button>
               </td>
@@ -182,7 +183,7 @@ class Calculator extends Component {
                 <Button onClick={(e) => this.headleClick(e)}>6</Button>
               </td>
               <td>
-                <Button onClick={(e) => this.headleClick(e)} typeStyle="emphasis">
+                <Button onClick={(e) => this.headleClick(e)} typestyle="emphasis">
                   ×
                 </Button>
               </td>
@@ -198,7 +199,7 @@ class Calculator extends Component {
                 <Button onClick={(e) => this.headleClick(e)}>3</Button>
               </td>
               <td>
-                <Button onClick={(e) => this.headleClick(e)} typeStyle="emphasis">
+                <Button onClick={(e) => this.headleClick(e)} typestyle="emphasis">
                   -
                 </Button>
               </td>
@@ -211,12 +212,12 @@ class Calculator extends Component {
                 <Button onClick={(e) => this.headleClick(e)}>.</Button>
               </td>
               <td>
-                <Button onClick={(e) => this.headleClick(e)} typeStyle="equal">
+                <Button onClick={(e) => this.headleClick(e)} typestyle="equal">
                   =
                 </Button>
               </td>
               <td>
-                <Button onClick={(e) => this.headleClick(e)} typeStyle="emphasis">
+                <Button onClick={(e) => this.headleClick(e)} typestyle="emphasis">
                   +
                 </Button>
               </td>
