@@ -1,4 +1,5 @@
-import { Container, GithubLink, InstagramLink, LinkedinLink, ContainsIcons } from "./style"
+import { GithubLink, InstagramLink, LinkedinLink } from "../icons"
+import { Container, ContainsIcons } from "./style"
 
 export const Footer = () => (
   <Container>

@@ -1,7 +1,8 @@
-import { Container, Table } from "./style"
+import { Container, ContantTerminal, Table, Terminal } from "./style"
 import { Component } from "react"
 import Button from "./button"
 import mError from "./mathematicalError"
+import { ClockHistory } from "../../general/icons"
 
 class Calculator extends Component {
   constructor(props) {
@@ -39,9 +40,9 @@ class Calculator extends Component {
     str += ")".repeat(this.numberOfOpenParentheses(str))
     str = str
       .replace(/(\d+(\.\d+)?)%/g, (m, n) => (parseFloat(n) / 100).toString())
-      .replace("()", "(0)")
-      .replace("×", "*")
-      .replace("÷", "/")
+      .replace(/\(\)/g, "(0)")
+      .replace(/×/g, "*")
+      .replace(/÷/g, "/")
 
     return str
   }
@@ -122,9 +123,10 @@ class Calculator extends Component {
           <thead>
             <tr>
               <td colSpan="4">
-                <div className="contant-terminal">
-                  <input className="terminal" typestyle="text" value={terminalValue} readOnly />
-                </div>
+                <ContantTerminal>
+                  <ClockHistory style={{ height: 20, width: 20 }} />
+                  <Terminal value={terminalValue} />
+                </ContantTerminal>
               </td>
             </tr>
           </thead>

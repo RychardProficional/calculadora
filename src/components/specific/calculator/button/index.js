@@ -13,16 +13,16 @@ function Button({
 
   const animationDown = () => {
     setTypeAnimation("down")
-    setBackButton(
-      setTimeout(() => {
-        if (longPressEffect) {
+    if (longPressEffect) {
+      setBackButton(
+        setTimeout(() => {
           setTypeAnimation("up")
           setTimeout(() => setTypeAnimation(""), 100)
-        } else {
-          setTypeAnimation("")
-        }
-      }, 1000),
-    )
+        }, 1000),
+      )
+    } else {
+      setTimeout(() => setTypeAnimation(""), 100)
+    }
   }
 
   const animationUp = () => {
@@ -33,13 +33,13 @@ function Button({
   return (
     <Container>
       <Btn
-        onMouseDown={(e) => {
+        onMouseDown={() => {
           onMouseDown()
           animationDown()
         }}
-        onMouseUp={(e) => {
+        onMouseUp={() => {
           onMouseUp()
-          animationUp()
+          if (longPressEffect) animationUp()
         }}
         typeanimation={typeAnimation}
         {...rest}

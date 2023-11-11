@@ -58,7 +58,7 @@ const baseButton = (theme, type, typeanimation) => {
 }
 
 export const Btn = styled.button`
-  transition: 0.5s;
+  transition: 0.3s;
 
   border-radius: 5px;
   width: 100%;

@@ -202,7 +202,6 @@ Aqui estão as cores utilizadas em cada tema deste site:
     Principal: #1A1E26 <br>
     Borda: #343A40 <br> 
     Corpo: #08090D
-    
   </div>
   </td>        
 </tr>

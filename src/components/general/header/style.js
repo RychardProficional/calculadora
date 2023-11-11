@@ -1,5 +1,4 @@
 import styled from "styled-components"
-import { ImContrast } from "react-icons/im"
 
 const velTransition = ".3s"
 
@@ -66,19 +65,5 @@ export const LinkNav = styled.a`
     &::before {
       width: 100%;
     }
-  }
-`
-const Icon = ({ className }) => <ImContrast className={className} />
-export const IconStyle = styled(Icon)`
-  min-height: 30px;
-  min-width: 30px;
-  padding: 0px;
-  border-radius: 20px;
-  transition: ${velTransition} ease;
-  &:hover {
-    border-radius: 3px;
-    padding: 2px;
-    background-color: blue;
-    color: red;
   }
 `
