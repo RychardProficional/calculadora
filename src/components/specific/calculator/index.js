@@ -1,8 +1,7 @@
-import { Container, ContantTerminal, Table, Terminal } from "./style"
+import { ClockHistory, Container, ContantTerminal, Table, Terminal } from "./style"
 import { Component } from "react"
 import Button from "./button"
 import mError from "./mathematicalError"
-import { ClockHistory } from "../../general/icons"
 
 class Calculator extends Component {
   constructor(props) {
@@ -85,7 +84,10 @@ class Calculator extends Component {
         (lestChar === "%" && "%" === newC)
       )
         return tv.slice(0, -1) + newC
-      else if (newC === "(" && (lestChar === ")" || (!isNaN(lestChar) && tv.length))) {
+      else if (
+        newC === "(" &&
+        (lestChar === ")" || (!isNaN(lestChar) && tv.length) || lestChar === "%")
+      ) {
         return tv + "×" + newC
       } else if (newC === ")") {
         if (this.numberOfOpenParentheses(tv) <= 0) return tv
@@ -101,7 +103,7 @@ class Calculator extends Component {
     return tv + newC
   }
 
-  headleClick = (e) => {
+  headleClickButton = (e) => {
     const value = e.target.innerText
     const { terminalValue, calculationDone } = this.state
     var newTerminalValue
@@ -124,7 +126,7 @@ class Calculator extends Component {
             <tr>
               <td colSpan="4">
                 <ContantTerminal>
-                  <ClockHistory style={{ height: 20, width: 20 }} />
+                  <ClockHistory />
                   <Terminal value={terminalValue} />
                 </ContantTerminal>
               </td>
@@ -133,17 +135,17 @@ class Calculator extends Component {
           <tbody>
             <tr>
               <td>
-                <Button onClick={(e) => this.headleClick(e)} typestyle="emphasis">
+                <Button onClick={(e) => this.headleClickButton(e)} typestyle="emphasis">
                   (
                 </Button>
               </td>
               <td>
-                <Button onClick={(e) => this.headleClick(e)} typestyle="emphasis">
+                <Button onClick={(e) => this.headleClickButton(e)} typestyle="emphasis">
                   )
                 </Button>
               </td>
               <td>
-                <Button onClick={(e) => this.headleClick(e)} typestyle="emphasis">
+                <Button onClick={(e) => this.headleClickButton(e)} typestyle="emphasis">
                   %
                 </Button>
               </td>
@@ -160,66 +162,66 @@ class Calculator extends Component {
             </tr>
             <tr>
               <td>
-                <Button onClick={(e) => this.headleClick(e)}>7</Button>
+                <Button onClick={(e) => this.headleClickButton(e)}>7</Button>
               </td>
               <td>
-                <Button onClick={(e) => this.headleClick(e)}>8</Button>
+                <Button onClick={(e) => this.headleClickButton(e)}>8</Button>
               </td>
               <td>
-                <Button onClick={(e) => this.headleClick(e)}>9</Button>
+                <Button onClick={(e) => this.headleClickButton(e)}>9</Button>
               </td>
               <td>
-                <Button onClick={(e) => this.headleClick(e)} typestyle="emphasis">
+                <Button onClick={(e) => this.headleClickButton(e)} typestyle="emphasis">
                   ÷
                 </Button>
               </td>
             </tr>
             <tr>
               <td>
-                <Button onClick={(e) => this.headleClick(e)}>4</Button>
+                <Button onClick={(e) => this.headleClickButton(e)}>4</Button>
               </td>
               <td>
-                <Button onClick={(e) => this.headleClick(e)}>5</Button>
+                <Button onClick={(e) => this.headleClickButton(e)}>5</Button>
               </td>
               <td>
-                <Button onClick={(e) => this.headleClick(e)}>6</Button>
+                <Button onClick={(e) => this.headleClickButton(e)}>6</Button>
               </td>
               <td>
-                <Button onClick={(e) => this.headleClick(e)} typestyle="emphasis">
+                <Button onClick={(e) => this.headleClickButton(e)} typestyle="emphasis">
                   ×
                 </Button>
               </td>
             </tr>
             <tr>
               <td>
-                <Button onClick={(e) => this.headleClick(e)}>1</Button>
+                <Button onClick={(e) => this.headleClickButton(e)}>1</Button>
               </td>
               <td>
-                <Button onClick={(e) => this.headleClick(e)}>2</Button>
+                <Button onClick={(e) => this.headleClickButton(e)}>2</Button>
               </td>
               <td>
-                <Button onClick={(e) => this.headleClick(e)}>3</Button>
+                <Button onClick={(e) => this.headleClickButton(e)}>3</Button>
               </td>
               <td>
-                <Button onClick={(e) => this.headleClick(e)} typestyle="emphasis">
+                <Button onClick={(e) => this.headleClickButton(e)} typestyle="emphasis">
                   -
                 </Button>
               </td>
             </tr>
             <tr>
               <td>
-                <Button onClick={(e) => this.headleClick(e)}>0</Button>
+                <Button onClick={(e) => this.headleClickButton(e)}>0</Button>
               </td>
               <td>
-                <Button onClick={(e) => this.headleClick(e)}>.</Button>
+                <Button onClick={(e) => this.headleClickButton(e)}>.</Button>
               </td>
               <td>
-                <Button onClick={(e) => this.headleClick(e)} typestyle="equal">
+                <Button onClick={(e) => this.headleClickButton(e)} typestyle="equal">
                   =
                 </Button>
               </td>
               <td>
-                <Button onClick={(e) => this.headleClick(e)} typestyle="emphasis">
+                <Button onClick={(e) => this.headleClickButton(e)} typestyle="emphasis">
                   +
                 </Button>
               </td>

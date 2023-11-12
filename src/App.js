@@ -4,6 +4,7 @@ import Header from "./components/general/header"
 import Footer from "./components/general/footer"
 import GlobalStyle from "./global/style"
 import theme from "./global/theme"
+import { useState } from "react"
 
 const Container = styled.div`
   display: flex;
@@ -14,12 +15,19 @@ const Container = styled.div`
 `
 
 function App() {
+  const [currentTheme, setCurrentTheme] = useState(theme.lite)
+
+  const changeTheme = () => {
+    if (currentTheme.name === theme.lite.name) setCurrentTheme(theme.dark)
+    else setCurrentTheme(theme.lite)
+  }
+
   return (
-    <ThemeProvider theme={theme.lite}>
+    <ThemeProvider theme={currentTheme}>
       <Container>
         <GlobalStyle />
         <>
-          <Header />
+          <Header changeTheme={changeTheme} />
           <Calculator />
           {/* Aqui tera o mecanismo de mudança de página */}
           <Footer />

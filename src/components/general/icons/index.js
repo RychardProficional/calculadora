@@ -12,6 +12,7 @@ const IconBase = css`
   height: 30px;
   width: 30px;
   transition: 0.3s ease;
+  color: #000000bc;
 `
 
 export const ThemeIcon = styled(ImContrast)`
@@ -26,7 +27,7 @@ export const ThemeIcon = styled(ImContrast)`
   }
 `
 
-export const ClockHistory = styled(BsClockHistory)`
+export const ClockHistoryIcon = styled(BsClockHistory)`
   ${IconBase}
 `
 

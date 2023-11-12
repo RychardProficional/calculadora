@@ -6,10 +6,14 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
 
     box-sizing: border-box;
+    transition: background-color .5s;
   }
 
   body{
-    background-color: ${(props) => props.theme.colors.primary1};
+    background-image: radial-gradient(circle,  ${(props) => props.theme.colors.primary1} 50%, ${(
+      props,
+    ) => props.theme.colors.primary5}   )
+
   }
   
   a {

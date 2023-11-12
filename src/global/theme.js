@@ -102,8 +102,8 @@ export const theme = {
           color: "#F29F05",
         },
         default: {
-          primary: "#034C8C",
-          secondary: "#3071F2",
+          primary: "#3071F2",
+          secondary: "#034C8C",
           border: "#023E73",
           color: "#023059",
         },

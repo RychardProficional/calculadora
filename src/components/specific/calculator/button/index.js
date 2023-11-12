@@ -17,11 +17,11 @@ function Button({
       setBackButton(
         setTimeout(() => {
           setTypeAnimation("up")
-          setTimeout(() => setTypeAnimation(""), 100)
+          setTimeout(() => setTypeAnimation(""), 80)
         }, 1000),
       )
     } else {
-      setTimeout(() => setTypeAnimation(""), 100)
+      setTimeout(() => setTypeAnimation(""), 20)
     }
   }
 
