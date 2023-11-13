@@ -5,9 +5,11 @@ export const Container = styled.footer`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-family: ${(props) => props.theme.fonts.secondaryTitle};
 
   background-color: ${(props) => props.theme.colors.secondary2};
   padding: 25px 0;
+  color: ${(props) => props.theme.colors.contrastColor1};
 `
 
 export const ContainsIcons = styled.div`

@@ -13,6 +13,7 @@ export const Container = styled.header`
   font-family: ${(props) => props.theme.fonts.secondaryTitle};
   font-weight: 600;
   background-color: ${(props) => props.theme.colors.secondary5};
+  color: ${(props) => props.theme.colors.contrastColor1};
 `
 
 export const Div = styled.div`
@@ -35,6 +36,7 @@ export const LinkNav = styled.a`
 
   padding: 5px;
   margin: 0 5px;
+  color: ${(props) => props.theme.colors.contrastColor1};
 
   font-size: 1.2rem;
 
@@ -61,7 +63,6 @@ export const LinkNav = styled.a`
   }
 
   &:hover {
-    color: #000000c1;
     &::before {
       width: 100%;
     }

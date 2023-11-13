@@ -16,13 +16,7 @@ const baseTheme = {
     yellow4: "#F29F05",
     yellow5: "#593D08",
 
-    blackTransparent: "",
-    black1: "",
-    black2: "",
-
-    whiteTransparent: "",
-    white1: "",
-    white2: "",
+    shadow: "ODODOD99",
   },
   longShadow: (color, size, blur) => {
     let shadows = ""
@@ -39,6 +33,9 @@ export const theme = {
     name: "lite",
     colors: {
       ...baseTheme.colors,
+
+      contrastColor1: "#0D0D0D",
+      contrastColor2: "#262626",
 
       primary1: "#F0F1FF",
       primary2: "#F2E4FF",
@@ -80,13 +77,20 @@ export const theme = {
     name: "dark",
     colors: {
       ...baseTheme.colors,
-      primary: "#023059",
-      primarycolor: "#ececf9",
-      primaryBackground: "?",
+      contrastColor1: "#F5F5F5",
+      contrastColor2: "#D9D9D9",
 
-      secondary: "#08090D",
-      secondarycolor: "#010021",
-      secondaryBackground: "?",
+      primary1: "#023059",
+      primary2: "#023E73",
+      primary3: "#034C8C",
+      primary4: "#023E73",
+      primary5: "#00040D",
+
+      secondary5: "#A1A69C",
+      secondary4: "#6E7371",
+      secondary3: "#343A40",
+      secondary2: "#1A1E26",
+      secondary1: "#08090D",
 
       btn: {
         equal: {
@@ -95,17 +99,17 @@ export const theme = {
           border: "#343A40",
           color: "#ECECF9",
         },
-        emphasis: {
-          primary: "#6E7371",
-          secondary: "#343A40",
-          border: "#A1A69C",
-          color: "#F29F05",
-        },
         default: {
-          primary: "#3071F2",
-          secondary: "#034C8C",
+          primary: "#A1A69C",
+          secondary: "#6E7371",
+          border: "#818681",
+          color: "#593D08",
+        },
+        emphasis: {
+          primary: "#034C8C",
+          secondary: "#023E73",
           border: "#023E73",
-          color: "#023059",
+          color: baseTheme.colors.white2,
         },
       },
     },

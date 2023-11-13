@@ -12,7 +12,7 @@ export const GlobalStyle = createGlobalStyle`
   body{
     background-image: radial-gradient(circle,  ${(props) => props.theme.colors.primary1} 50%, ${(
       props,
-    ) => props.theme.colors.primary5}   )
+    ) => props.theme.colors.primary2}   )
 
   }
   

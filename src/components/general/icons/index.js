@@ -12,7 +12,7 @@ const IconBase = css`
   height: 30px;
   width: 30px;
   transition: 0.3s ease;
-  color: #000000bc;
+  color: ${(props) => props.theme.colors.contrastColor1};
 `
 
 export const ThemeIcon = styled(ImContrast)`
@@ -22,8 +22,8 @@ export const ThemeIcon = styled(ImContrast)`
   &:hover {
     border-radius: 3px;
     padding: 2px;
-    background-color: blue;
-    color: red;
+    background-color: ${(props) => props.theme.colors.secondary1};
+    color: ${(props) => props.theme.colors.contrastColor1};
   }
 `
 
