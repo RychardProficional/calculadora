@@ -20,6 +20,10 @@ export const GlobalStyle = createGlobalStyle`
     text-decoration: none;
     color: black;
   }
+
+  input{
+    background-color: transparent;
+  }
 `
 
 export default GlobalStyle

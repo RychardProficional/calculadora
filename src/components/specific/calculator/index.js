@@ -2,6 +2,7 @@ import { ClockHistory, Container, ContantTerminal, Table, Terminal } from "./sty
 import { Component } from "react"
 import Button from "./button"
 import mError from "./mathematicalError"
+import History from "./history"
 
 class Calculator extends Component {
   constructor(props) {
@@ -10,6 +11,8 @@ class Calculator extends Component {
       terminalValue: "",
       datePress: 0,
       calculationDone: false,
+      activeHistory: true,
+      history: [],
     }
   }
 
@@ -34,8 +37,6 @@ class Calculator extends Component {
   }
 
   calcPrepare = (str) => {
-    if (this.operation.slice(0, -1).includes(str.slice(-1))) str = str.slice(0, -1)
-
     str += ")".repeat(this.numberOfOpenParentheses(str))
     str = str
       .replace(/(\d+(\.\d+)?)%/g, (m, n) => (parseFloat(n) / 100).toString())
@@ -46,22 +47,28 @@ class Calculator extends Component {
     return str
   }
 
-  calc = (str = "") => {
-    str = this.calcPrepare(str)
-
+  calc = (s = "") => {
+    let result
+    if (this.operation.slice(0, -1).includes(s.slice(-1))) s = s.slice(0, -1)
+    let str = this.calcPrepare(s)
     try {
       // Verifica se tem divisão por zero
       if ((str.match(/(?!\/)(0+(\.\d+)?)/gm) || []).filter((x) => parseFloat(x) === 0).length)
         throw new mError("Divisão por zero")
 
       // eslint-disable-next-line
-      return eval(str).toString()
+      result = eval(str).toString()
     } catch (e) {
       if (e.typestyle === "mathematicalError") console.log(e.message)
       else alert(`Erro ao tentar executar o calculo: ${str}`)
-      return "0"
+
+      result = "0"
     } finally {
-      this.setState({ calculationDone: true })
+      console.log("result: " + result)
+      this.setState({ calculationDone: true, history: [...this.state.history, [s, result]] })
+      console.log(this.state.history)
+      this.setState({})
+      return result
     }
   }
 
@@ -117,8 +124,11 @@ class Calculator extends Component {
     })
   }
 
+  headleClickHistory = () => {
+    this.setState({ activeHistory: !this.state.activeHistory })
+  }
   render() {
-    const { terminalValue } = this.state
+    const { terminalValue, activeHistory, history } = this.state
     return (
       <Container>
         <Table>
@@ -126,7 +136,7 @@ class Calculator extends Component {
             <tr>
               <td colSpan="4">
                 <ContantTerminal>
-                  <ClockHistory />
+                  <ClockHistory onClick={this.headleClickHistory} />
                   <Terminal value={terminalValue} />
                 </ContantTerminal>
               </td>
@@ -228,6 +238,7 @@ class Calculator extends Component {
             </tr>
           </tbody>
         </Table>
+        <History hidden={activeHistory} content={history} />
       </Container>
     )
   }

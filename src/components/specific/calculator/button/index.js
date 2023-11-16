@@ -2,10 +2,10 @@ import { useState } from "react"
 import { Btn, Container } from "./style"
 
 function Button({
-  children,
-  onMouseUp = () => {},
   onMouseDown = () => {},
+  onMouseUp = () => {},
   longPressEffect = false,
+  children,
   ...rest
 }) {
   const [typeAnimation, setTypeAnimation] = useState("")

@@ -109,7 +109,7 @@ export const theme = {
           primary: "#034C8C",
           secondary: "#023E73",
           border: "#023E73",
-          color: baseTheme.colors.white2,
+          color: baseTheme.colors.contrastColor2,
         },
       },
     },
